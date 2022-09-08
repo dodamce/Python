@@ -1,0 +1,146 @@
+<!DOCTYPE html><!--大小写不敏感-->
+
+<!--根元素-->
+<html lang="en">
+
+<!--头元素-->
+<head class="mode">
+    <meta charset="UTF-8"> <!--网页编码格式-->
+<!--    指定搜索网页的关键字-->
+    <meta name="keyword" content="html css javascript">
+<!--    30s刷新页面-->
+    <meta http-equiv="refresh" content="30">
+    <title>登录页面</title>
+</head>
+
+<!--网页可见内容-->
+<!--<body id="asd" class="mode" background="276715.jpg" style="background-size: cover">-->
+<body id="asd" class="mode">
+<!--属性放在元素内，放在开始的标签后-->
+    <!--文档标题 h1标题最大-->
+<!--    <h1>标题0</h1>-->
+<!--    <h2>标题1</h2>-->
+<!--    <h3>标题2</h3>-->
+<!--    <h4>标题3</h4>-->
+<!--    <h5>标题4</h5>-->
+<!--    <h6>标题5</h6>-->
+<h4>中北大学</h4>
+<!--段落自带换行-->
+<p id="goto">第一段</p>
+<p>第二段</p>
+
+<!--链接 href-->
+<a href="https://blog.csdn.net/dodamce?spm=1001.2101.3001.5343">博客链接</a>
+<br><!--换行-->
+<a href="https://blog.csdn.net/dodamce?spm=1001.2101.3001.5343">博客链接2</a>
+<br>
+<a href="#goto">跳转到第一段</a>
+<br>
+<!--找最受欢迎的节点-->
+<a href="https://movie.douban.com/#reviews">跳转到豆瓣最受欢迎电影</a>
+<!--图片-->
+<!--<img src="p2674132194.jpg" height="300" width="250" alt="图片">-->
+<!--alt图片出错后显示的值-->
+
+<!--表格-->
+<table border="1">
+<!--    tr代表行数-->
+    <tr>
+<!--    td决定列数-->
+        <td>名称</td>
+        <td>姓名</td>
+    </tr>
+    <tr>
+        <td>小明</td>
+        <td>男</td>
+    </tr>
+</table>
+<!--列表-->
+<ul>
+    <li>列表1</li>
+    <li>列表2</li>
+    <li>列表3</li>
+</ul>
+<!--无序列表-->
+<ol>
+    <li>有序列表1</li>
+    <li>有序列表2</li>
+    <li>有序列表3</li>
+</ol>
+
+<!--自定义列表-->
+<dl>
+<!--    主级-->
+    <dt>排序</dt>
+<!--    dd次级-->
+    <dd>&排序1</dd>
+    <dd>=排序2</dd>
+</dl>
+
+<!--区块封装各种标签-->
+<div style="background: #e01414">
+    <!--列表-->
+    <ul>
+        <li>列表1</li>
+        <li>列表2</li>
+        <li>列表3</li>
+    </ul>
+    <!--无序列表-->
+    <ol>
+        <li>有序列表1</li>
+        <li>有序列表2</li>
+        <li>有序列表3</li>
+    </ol>
+
+    <!--自定义列表-->
+    <dl>
+    <!--    主级-->
+        <dt>排序</dt>
+    <!--    dd次级-->
+        <dd>&排序1</dd>
+        <dd>=排序2</dd>
+    </dl>
+</div>
+
+<!--文本容器-->
+<span>
+
+</span>
+
+<!--提交表单-->
+<form action="" method="post" style="text-align:center">
+<!--    输入类型 -->
+    账号:<input name="user-name" type="text">
+    <br><br>
+    密码:<input name="keyword" type="text">
+    <br>
+    <input type="submit" value="登录">
+</form>
+
+<!--框架 嵌套另一个页面-->
+<!--<iframe frameborder="0" src="https://movie.douban.com/" width="600" height="800"></iframe>-->
+
+<!--单选框表单-->
+<form action="" method="post">
+<!--    输入类型 -->
+    <input name="XXX" value="1" type="radio">男
+    <br>
+    <input name="XXX" value="0" type="radio">女
+    <br>
+</form>
+
+<!--多选框表单-->
+<form action="" method="post">
+<!--    输入类型 -->
+    <input name="XXX" value="1" type="checkbox">多选0
+    <br>
+    <input name="XXX" value="0" type="checkbox">多选1
+    <br>
+</form>
+
+<!--字符实体-->
+<!--空格-->
+a&nbsp;&nbsp;&nbsp;b<br>
+&lt;test&gt;
+</body>
+</html>
