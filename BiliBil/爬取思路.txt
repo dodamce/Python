@@ -1,0 +1,39 @@
+首先B站上有文章介绍了B站一些API方便开发，这里贴出链接
+
+[B站API](https://www.bilibili.com/read/cv12357091/)
+
+如果不使用这个文章，可以通过抓包获取B站网页在构造时请求的链接
+
+https://api.bilibili.com/x/space/arc/search?mid=UID&pn=页码&ps=单页数据量&index=分类
+
+mid：用户的id
+pn：获取用户第几页数据
+ps：一页要获取的视频数量
+index：获取全部视频，不要分类
+
+测试请求B站用户数据如下：
+
+可以提取请求信息Json的视频ID和作者信息
+
+多测几次，可以发现，如果页面为超出用户的视频页，vlist列表就是个空值
+-  list":{"tlist":null,"vlist":[]}
+- 数据不存在时，可以得到参数vlist为空
+
+所以我们可以循环获取用户所有页视频，直到vlist为空
+
+
+需要注意，我找的B站视频和音频是分别传输的。这就涉及到视频和音频拼接。这里使用ffmpeg进行视频和音频的拼接。
+
+下载好ffmpeg后将其放入项目文件夹中
+![在这里插入图片描述](https://img-blog.csdnimg.cn/443efae4f59147f99f154618fb6fc304.png)
+
+简单的音频视频的拼接方式如下：
+
+Python爬取函数
+
+```python
+import subprocess
+
+cmd = "ffmpeg.exe -i ./move.mp4 -i ./music.mp3 -acodec copy -vcodec copy output.mp4"
+subprocess.run(cmd, shell=True)
+```
